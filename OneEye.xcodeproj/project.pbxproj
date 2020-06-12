@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8BA9D2F2483EA9C0069FD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D2E2483EA9C0069FD0C /* AppDelegate.swift */; };
-		D8BA9D312483EA9C0069FD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D302483EA9C0069FD0C /* SceneDelegate.swift */; };
-		D8BA9D332483EA9C0069FD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D322483EA9C0069FD0C /* ViewController.swift */; };
 		D8BA9D362483EA9C0069FD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D342483EA9C0069FD0C /* Main.storyboard */; };
-		D8BA9D382483EAA00069FD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D372483EAA00069FD0C /* Assets.xcassets */; };
 		D8BA9D3B2483EAA00069FD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D392483EAA00069FD0C /* LaunchScreen.storyboard */; };
 		D8BA9D462483EAA00069FD0C /* OneEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D452483EAA00069FD0C /* OneEyeTests.swift */; };
 		D8BA9D512483EAA00069FD0C /* OneEyeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D502483EAA00069FD0C /* OneEyeUITests.swift */; };
+		D8BA9D5F248EF86E0069FD0C /* CompletedViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D5E248EF86E0069FD0C /* CompletedViewList.swift */; };
+		D8BA9D63248EFF780069FD0C /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D62248EFF780069FD0C /* ViewCell.swift */; };
+		D8BA9D65248F03AF0069FD0C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D64248F03AF0069FD0C /* View.swift */; };
+		D8BA9D67248F87A10069FD0C /* ViewFeedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D66248F87A10069FD0C /* ViewFeedDetail.swift */; };
+		D8BA9D6F248F93C50069FD0C /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D6E248F93C50069FD0C /* DetailViewCell.swift */; };
+		D8BA9D71248F97D80069FD0C /* DetailEye.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D70248F97D80069FD0C /* DetailEye.swift */; };
+		D8BA9D7A248FBB3E0069FD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D79248FBB3E0069FD0C /* Assets.xcassets */; };
+		D8BA9D7E248FBCBB0069FD0C /* DSC_0216.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D7C248FBCBA0069FD0C /* DSC_0216.jpg */; };
+		D8BA9D7F248FBCBB0069FD0C /* DSC_0215.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D7D248FBCBB0069FD0C /* DSC_0215.jpg */; };
+		D8BA9D81249117630069FD0C /* AddRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D80249117630069FD0C /* AddRequest.swift */; };
+		D8BA9D8324912FFD0069FD0C /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */; };
+		D8BA9D86249146450069FD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D84249146450069FD0C /* SceneDelegate.swift */; };
+		D8BA9D87249146450069FD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D85249146450069FD0C /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +45,7 @@
 
 /* Begin PBXFileReference section */
 		D8BA9D2B2483EA9C0069FD0C /* OneEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8BA9D2E2483EA9C0069FD0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8BA9D302483EA9C0069FD0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8BA9D322483EA9C0069FD0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8BA9D352483EA9C0069FD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D8BA9D372483EAA00069FD0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8BA9D3A2483EAA00069FD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8BA9D3C2483EAA00069FD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8BA9D412483EAA00069FD0C /* OneEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +54,19 @@
 		D8BA9D4C2483EAA00069FD0C /* OneEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BA9D502483EAA00069FD0C /* OneEyeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneEyeUITests.swift; sourceTree = "<group>"; };
 		D8BA9D522483EAA00069FD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8BA9D5E248EF86E0069FD0C /* CompletedViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewList.swift; sourceTree = "<group>"; };
+		D8BA9D62248EFF780069FD0C /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		D8BA9D64248F03AF0069FD0C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		D8BA9D66248F87A10069FD0C /* ViewFeedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFeedDetail.swift; sourceTree = "<group>"; };
+		D8BA9D6E248F93C50069FD0C /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
+		D8BA9D70248F97D80069FD0C /* DetailEye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEye.swift; sourceTree = "<group>"; };
+		D8BA9D79248FBB3E0069FD0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8BA9D7C248FBCBA0069FD0C /* DSC_0216.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0216.jpg; sourceTree = "<group>"; };
+		D8BA9D7D248FBCBB0069FD0C /* DSC_0215.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DSC_0215.jpg; sourceTree = "<group>"; };
+		D8BA9D80249117630069FD0C /* AddRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRequest.swift; sourceTree = "<group>"; };
+		D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		D8BA9D84249146450069FD0C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D8BA9D85249146450069FD0C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +117,14 @@
 		D8BA9D2D2483EA9C0069FD0C /* OneEye */ = {
 			isa = PBXGroup;
 			children = (
-				D8BA9D2E2483EA9C0069FD0C /* AppDelegate.swift */,
-				D8BA9D302483EA9C0069FD0C /* SceneDelegate.swift */,
-				D8BA9D322483EA9C0069FD0C /* ViewController.swift */,
-				D8BA9D342483EA9C0069FD0C /* Main.storyboard */,
-				D8BA9D372483EAA00069FD0C /* Assets.xcassets */,
-				D8BA9D392483EAA00069FD0C /* LaunchScreen.storyboard */,
+				D8BA9D85249146450069FD0C /* AppDelegate.swift */,
+				D8BA9D84249146450069FD0C /* SceneDelegate.swift */,
+				D8BA9D7B248FBCAF0069FD0C /* Content */,
+				D8BA9D79248FBB3E0069FD0C /* Assets.xcassets */,
+				D8BA9D68248F8FC80069FD0C /* Cells */,
+				D8BA9D6A248F90370069FD0C /* ViewController */,
+				D8BA9D6B248F909E0069FD0C /* CustomObj */,
+				D8BA9D69248F8FF40069FD0C /* Storyboard */,
 				D8BA9D3C2483EAA00069FD0C /* Info.plist */,
 			);
 			path = OneEye;
@@ -126,6 +146,53 @@
 				D8BA9D522483EAA00069FD0C /* Info.plist */,
 			);
 			path = OneEyeUITests;
+			sourceTree = "<group>";
+		};
+		D8BA9D68248F8FC80069FD0C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA9D62248EFF780069FD0C /* ViewCell.swift */,
+				D8BA9D6E248F93C50069FD0C /* DetailViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D8BA9D69248F8FF40069FD0C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA9D342483EA9C0069FD0C /* Main.storyboard */,
+				D8BA9D392483EAA00069FD0C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D8BA9D6A248F90370069FD0C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA9D66248F87A10069FD0C /* ViewFeedDetail.swift */,
+				D8BA9D5E248EF86E0069FD0C /* CompletedViewList.swift */,
+				D8BA9D80249117630069FD0C /* AddRequest.swift */,
+				D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D8BA9D6B248F909E0069FD0C /* CustomObj */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA9D64248F03AF0069FD0C /* View.swift */,
+				D8BA9D70248F97D80069FD0C /* DetailEye.swift */,
+			);
+			path = CustomObj;
+			sourceTree = "<group>";
+		};
+		D8BA9D7B248FBCAF0069FD0C /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				D8BA9D7D248FBCBB0069FD0C /* DSC_0215.jpg */,
+				D8BA9D7C248FBCBA0069FD0C /* DSC_0216.jpg */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8BA9D3B2483EAA00069FD0C /* LaunchScreen.storyboard in Resources */,
-				D8BA9D382483EAA00069FD0C /* Assets.xcassets in Resources */,
+				D8BA9D7E248FBCBB0069FD0C /* DSC_0216.jpg in Resources */,
+				D8BA9D7F248FBCBB0069FD0C /* DSC_0215.jpg in Resources */,
+				D8BA9D7A248FBB3E0069FD0C /* Assets.xcassets in Resources */,
 				D8BA9D362483EA9C0069FD0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +328,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8BA9D332483EA9C0069FD0C /* ViewController.swift in Sources */,
-				D8BA9D2F2483EA9C0069FD0C /* AppDelegate.swift in Sources */,
-				D8BA9D312483EA9C0069FD0C /* SceneDelegate.swift in Sources */,
+				D8BA9D81249117630069FD0C /* AddRequest.swift in Sources */,
+				D8BA9D8324912FFD0069FD0C /* LocationSearchTable.swift in Sources */,
+				D8BA9D86249146450069FD0C /* SceneDelegate.swift in Sources */,
+				D8BA9D63248EFF780069FD0C /* ViewCell.swift in Sources */,
+				D8BA9D71248F97D80069FD0C /* DetailEye.swift in Sources */,
+				D8BA9D67248F87A10069FD0C /* ViewFeedDetail.swift in Sources */,
+				D8BA9D5F248EF86E0069FD0C /* CompletedViewList.swift in Sources */,
+				D8BA9D6F248F93C50069FD0C /* DetailViewCell.swift in Sources */,
+				D8BA9D87249146450069FD0C /* AppDelegate.swift in Sources */,
+				D8BA9D65248F03AF0069FD0C /* View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +513,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D33F8575JC;
 				INFOPLIST_FILE = OneEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +532,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D33F8575JC;
 				INFOPLIST_FILE = OneEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
