@@ -12,10 +12,11 @@
 - Add time as a parameter and remove content after time T
 
 
-## Running the code
+## Accessing the code
 - Open XCode 11
 - In the command line: $git clone https://github.com/gn3112/OnEye.git 
 - Open OneEye.xcodeproj in the project directory
+
 ### Running an emulator or use your device for viewing the app
 - Once XCode project is open, select a device for the app simulation:
 ![alt text](helper1.png)
