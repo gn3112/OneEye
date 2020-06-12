@@ -1,15 +1,15 @@
 # OnEye
 
 ## TODO by order of priority
-Capture video or from file
-Monitor user post location and accept post based on that
-Requests table view 
-Firebase database for requests, posts
-Firebase storage for videos/images
-Link firebase to table views, uibuttons... 
-Firebase for user authentication
-Filter for posts
-Add time as a parameter and remove content after time T
+- Capture video or from file
+- Monitor user post location and accept post based on that
+- Requests table view 
+- Firebase database for requests, posts
+- Firebase storage for videos/images
+- Link firebase to table views, uibuttons... 
+- Firebase for user authentication
+- Filter for posts
+- Add time as a parameter and remove content after time T
 
 
 ## Running the code
