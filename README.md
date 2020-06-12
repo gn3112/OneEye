@@ -17,7 +17,8 @@
 - In the command line: $git clone https://github.com/gn3112/OnEye.git 
 - Open OneEye.xcodeproj in the project directory
 
-### Running an emulator or use your device for viewing the app
+### Running an emulator or use your device for viewing the app
+
 - Once XCode project is open, select a device for the app simulation:
 ![alt text](helper1.png)
 - Select simulator or your device (prior to that connect your iphone):
