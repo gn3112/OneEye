@@ -7,27 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewFeedDetail: UIViewController {
         
     @IBOutlet weak var detailTableView: UITableView!
     
-    var image: UIImage?
+    var url: String?
     
     var views: [DetailEye] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        views.append(DetailEye(image: image!))
+        views.append(DetailEye(url: url!))
+        views.append(DetailEye(url: url!))
 
         detailTableView.delegate = self
         detailTableView.dataSource = self
         
         detailTableView.backgroundColor = .white
     }
-
-
+    
 }
 
 extension ViewFeedDetail: UITableViewDataSource, UITableViewDelegate {
@@ -40,7 +41,13 @@ extension ViewFeedDetail: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailViewCell") as! DetailViewCell
         
-        cell.setImage(image: view.image)
+        let videoURL = NSURL(string: view.url)
+        
+        let avPlayer = AVPlayer(url: videoURL as! URL)
+        
+        cell.PlayerView?.playerLayer.player = avPlayer
+        
+        cell.PlayerView.player?.play()
         
         return cell
     }

@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class DetailEye {
-    var image: UIImage
+    var url: String
     
-    init(image: UIImage) {
-        self.image = image
+    init(url: String) {
+        self.url = url
     }
 }

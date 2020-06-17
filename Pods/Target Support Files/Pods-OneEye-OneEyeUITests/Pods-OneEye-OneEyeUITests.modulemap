@@ -1,0 +1,6 @@
+framework module Pods_OneEye_OneEyeUITests {
+  umbrella header "Pods-OneEye-OneEyeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

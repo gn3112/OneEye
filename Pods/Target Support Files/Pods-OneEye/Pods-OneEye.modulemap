@@ -1,0 +1,6 @@
+framework module Pods_OneEye {
+  umbrella header "Pods-OneEye-umbrella.h"
+
+  export *
+  module * { export * }
+}

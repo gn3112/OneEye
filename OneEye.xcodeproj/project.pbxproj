@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		318BD9C821D8C1A41E8C8DC3 /* Pods_OneEye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EFBD6EDF100083E8B7125C /* Pods_OneEye.framework */; };
+		569CA10574303B7D0934E31C /* Pods_OneEyeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5E3E593996EE3488DC5062 /* Pods_OneEyeTests.framework */; };
+		B48C8DA0E6170F531312797A /* Pods_OneEye_OneEyeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88BD4C903820DC3E4A3A736 /* Pods_OneEye_OneEyeUITests.framework */; };
+		D802BE6724954F4800EFAC18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D802BE6624954F4800EFAC18 /* GoogleService-Info.plist */; };
+		D802BE69249582D000EFAC18 /* UnansweredRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802BE68249582D000EFAC18 /* UnansweredRequest.swift */; };
+		D802BE6B249582DD00EFAC18 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802BE6A249582DD00EFAC18 /* RequestCell.swift */; };
+		D8873609249684CB00F518E3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8873608249684CB00F518E3 /* Request.swift */; };
 		D8BA9D362483EA9C0069FD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D342483EA9C0069FD0C /* Main.storyboard */; };
 		D8BA9D3B2483EAA00069FD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BA9D392483EAA00069FD0C /* LaunchScreen.storyboard */; };
 		D8BA9D462483EAA00069FD0C /* OneEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D452483EAA00069FD0C /* OneEyeTests.swift */; };
@@ -24,6 +31,8 @@
 		D8BA9D8324912FFD0069FD0C /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */; };
 		D8BA9D86249146450069FD0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D84249146450069FD0C /* SceneDelegate.swift */; };
 		D8BA9D87249146450069FD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D85249146450069FD0C /* AppDelegate.swift */; };
+		D8BA9D892493881B0069FD0C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D882493881B0069FD0C /* PlayerView.swift */; };
+		D8BA9D8B249396640069FD0C /* AnswerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BA9D8A249396640069FD0C /* AnswerRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15DBA4E562D7E07DE3B4B517 /* Pods-OneEye-OneEyeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneEye-OneEyeUITests.debug.xcconfig"; path = "Target Support Files/Pods-OneEye-OneEyeUITests/Pods-OneEye-OneEyeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E5E3E593996EE3488DC5062 /* Pods_OneEyeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneEyeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B4D17850EB6A52D32D9D0A2 /* Pods-OneEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneEye.debug.xcconfig"; path = "Target Support Files/Pods-OneEye/Pods-OneEye.debug.xcconfig"; sourceTree = "<group>"; };
+		8F533F5535E168E6A1B7CEBC /* Pods-OneEye-OneEyeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneEye-OneEyeUITests.release.xcconfig"; path = "Target Support Files/Pods-OneEye-OneEyeUITests/Pods-OneEye-OneEyeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D484067CAAA7B381AEB6B591 /* Pods-OneEyeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneEyeTests.release.xcconfig"; path = "Target Support Files/Pods-OneEyeTests/Pods-OneEyeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D802BE6624954F4800EFAC18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D802BE68249582D000EFAC18 /* UnansweredRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnansweredRequest.swift; sourceTree = "<group>"; };
+		D802BE6A249582DD00EFAC18 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		D8873608249684CB00F518E3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		D8BA9D2B2483EA9C0069FD0C /* OneEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BA9D352483EA9C0069FD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8BA9D3A2483EAA00069FD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +85,12 @@
 		D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		D8BA9D84249146450069FD0C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D8BA9D85249146450069FD0C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8BA9D882493881B0069FD0C /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		D8BA9D8A249396640069FD0C /* AnswerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRequest.swift; sourceTree = "<group>"; };
+		DA21EAB394E4211A40A6D825 /* Pods-OneEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneEye.release.xcconfig"; path = "Target Support Files/Pods-OneEye/Pods-OneEye.release.xcconfig"; sourceTree = "<group>"; };
+		E291D9C595412A82CCA56567 /* Pods-OneEyeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneEyeTests.debug.xcconfig"; path = "Target Support Files/Pods-OneEyeTests/Pods-OneEyeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E88BD4C903820DC3E4A3A736 /* Pods_OneEye_OneEyeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneEye_OneEyeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7EFBD6EDF100083E8B7125C /* Pods_OneEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318BD9C821D8C1A41E8C8DC3 /* Pods_OneEye.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				569CA10574303B7D0934E31C /* Pods_OneEyeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +114,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48C8DA0E6170F531312797A /* Pods_OneEye_OneEyeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43D20397EE1C7C1B9653533A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D17850EB6A52D32D9D0A2 /* Pods-OneEye.debug.xcconfig */,
+				DA21EAB394E4211A40A6D825 /* Pods-OneEye.release.xcconfig */,
+				15DBA4E562D7E07DE3B4B517 /* Pods-OneEye-OneEyeUITests.debug.xcconfig */,
+				8F533F5535E168E6A1B7CEBC /* Pods-OneEye-OneEyeUITests.release.xcconfig */,
+				E291D9C595412A82CCA56567 /* Pods-OneEyeTests.debug.xcconfig */,
+				D484067CAAA7B381AEB6B591 /* Pods-OneEyeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		700C09AF3D97B84C1F21B70C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7EFBD6EDF100083E8B7125C /* Pods_OneEye.framework */,
+				E88BD4C903820DC3E4A3A736 /* Pods_OneEye_OneEyeUITests.framework */,
+				2E5E3E593996EE3488DC5062 /* Pods_OneEyeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8BA9D222483EA9C0069FD0C = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +151,8 @@
 				D8BA9D442483EAA00069FD0C /* OneEyeTests */,
 				D8BA9D4F2483EAA00069FD0C /* OneEyeUITests */,
 				D8BA9D2C2483EA9C0069FD0C /* Products */,
+				43D20397EE1C7C1B9653533A /* Pods */,
+				700C09AF3D97B84C1F21B70C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +169,7 @@
 		D8BA9D2D2483EA9C0069FD0C /* OneEye */ = {
 			isa = PBXGroup;
 			children = (
+				D802BE6624954F4800EFAC18 /* GoogleService-Info.plist */,
 				D8BA9D85249146450069FD0C /* AppDelegate.swift */,
 				D8BA9D84249146450069FD0C /* SceneDelegate.swift */,
 				D8BA9D7B248FBCAF0069FD0C /* Content */,
@@ -151,6 +204,7 @@
 		D8BA9D68248F8FC80069FD0C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D802BE6A249582DD00EFAC18 /* RequestCell.swift */,
 				D8BA9D62248EFF780069FD0C /* ViewCell.swift */,
 				D8BA9D6E248F93C50069FD0C /* DetailViewCell.swift */,
 			);
@@ -169,19 +223,24 @@
 		D8BA9D6A248F90370069FD0C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D802BE68249582D000EFAC18 /* UnansweredRequest.swift */,
 				D8BA9D66248F87A10069FD0C /* ViewFeedDetail.swift */,
 				D8BA9D5E248EF86E0069FD0C /* CompletedViewList.swift */,
 				D8BA9D80249117630069FD0C /* AddRequest.swift */,
 				D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */,
+				D8BA9D8A249396640069FD0C /* AnswerRequest.swift */,
 			);
-			path = ViewController;
-			sourceTree = "<group>";
+			name = ViewController;
+			path = /Users/georgesnomicos/Documents/OneEye/OneEye/ViewController;
+			sourceTree = "<absolute>";
 		};
 		D8BA9D6B248F909E0069FD0C /* CustomObj */ = {
 			isa = PBXGroup;
 			children = (
 				D8BA9D64248F03AF0069FD0C /* View.swift */,
 				D8BA9D70248F97D80069FD0C /* DetailEye.swift */,
+				D8BA9D882493881B0069FD0C /* PlayerView.swift */,
+				D8873608249684CB00F518E3 /* Request.swift */,
 			);
 			path = CustomObj;
 			sourceTree = "<group>";
@@ -202,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8BA9D552483EAA00069FD0C /* Build configuration list for PBXNativeTarget "OneEye" */;
 			buildPhases = (
+				C9E4D01F6E48726A1FA7E5BF /* [CP] Check Pods Manifest.lock */,
 				D8BA9D272483EA9C0069FD0C /* Sources */,
 				D8BA9D282483EA9C0069FD0C /* Frameworks */,
 				D8BA9D292483EA9C0069FD0C /* Resources */,
+				80C40D332BE465DAFA8D7D14 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8BA9D582483EAA00069FD0C /* Build configuration list for PBXNativeTarget "OneEyeTests" */;
 			buildPhases = (
+				8DC4DAE27C1B29701DDEA561 /* [CP] Check Pods Manifest.lock */,
 				D8BA9D3D2483EAA00069FD0C /* Sources */,
 				D8BA9D3E2483EAA00069FD0C /* Frameworks */,
 				D8BA9D3F2483EAA00069FD0C /* Resources */,
@@ -237,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8BA9D5B2483EAA00069FD0C /* Build configuration list for PBXNativeTarget "OneEyeUITests" */;
 			buildPhases = (
+				8B00F9C347E7A96F5E0B9158 /* [CP] Check Pods Manifest.lock */,
 				D8BA9D482483EAA00069FD0C /* Sources */,
 				D8BA9D492483EAA00069FD0C /* Frameworks */,
 				D8BA9D4A2483EAA00069FD0C /* Resources */,
+				966D112B43B02CDC20579E90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,6 +368,7 @@
 				D8BA9D7F248FBCBB0069FD0C /* DSC_0215.jpg in Resources */,
 				D8BA9D7A248FBB3E0069FD0C /* Assets.xcassets in Resources */,
 				D8BA9D362483EA9C0069FD0C /* Main.storyboard in Resources */,
+				D802BE6724954F4800EFAC18 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +388,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		80C40D332BE465DAFA8D7D14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneEye/Pods-OneEye-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneEye/Pods-OneEye-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneEye/Pods-OneEye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B00F9C347E7A96F5E0B9158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneEye-OneEyeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC4DAE27C1B29701DDEA561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneEyeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		966D112B43B02CDC20579E90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneEye-OneEyeUITests/Pods-OneEye-OneEyeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OneEye-OneEyeUITests/Pods-OneEye-OneEyeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OneEye-OneEyeUITests/Pods-OneEye-OneEyeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9E4D01F6E48726A1FA7E5BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneEye-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D8BA9D272483EA9C0069FD0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D8BA9D81249117630069FD0C /* AddRequest.swift in Sources */,
+				D802BE6B249582DD00EFAC18 /* RequestCell.swift in Sources */,
+				D802BE69249582D000EFAC18 /* UnansweredRequest.swift in Sources */,
 				D8BA9D8324912FFD0069FD0C /* LocationSearchTable.swift in Sources */,
 				D8BA9D86249146450069FD0C /* SceneDelegate.swift in Sources */,
+				D8BA9D8B249396640069FD0C /* AnswerRequest.swift in Sources */,
+				D8BA9D892493881B0069FD0C /* PlayerView.swift in Sources */,
+				D8873609249684CB00F518E3 /* Request.swift in Sources */,
 				D8BA9D63248EFF780069FD0C /* ViewCell.swift in Sources */,
 				D8BA9D71248F97D80069FD0C /* DetailEye.swift in Sources */,
 				D8BA9D67248F87A10069FD0C /* ViewFeedDetail.swift in Sources */,
@@ -508,17 +681,18 @@
 		};
 		D8BA9D562483EAA00069FD0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B4D17850EB6A52D32D9D0A2 /* Pods-OneEye.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D33F8575JC;
 				INFOPLIST_FILE = OneEye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = noid.OneEye;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nomicos.OneEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,17 +701,18 @@
 		};
 		D8BA9D572483EAA00069FD0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA21EAB394E4211A40A6D825 /* Pods-OneEye.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D33F8575JC;
 				INFOPLIST_FILE = OneEye/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = noid.OneEye;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nomicos.OneEye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,6 +721,7 @@
 		};
 		D8BA9D592483EAA00069FD0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E291D9C595412A82CCA56567 /* Pods-OneEyeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -568,6 +744,7 @@
 		};
 		D8BA9D5A2483EAA00069FD0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D484067CAAA7B381AEB6B591 /* Pods-OneEyeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -590,6 +767,7 @@
 		};
 		D8BA9D5C2483EAA00069FD0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15DBA4E562D7E07DE3B4B517 /* Pods-OneEye-OneEyeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -610,6 +788,7 @@
 		};
 		D8BA9D5D2483EAA00069FD0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F533F5535E168E6A1B7CEBC /* Pods-OneEye-OneEyeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

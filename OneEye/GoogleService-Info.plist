@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1030416808811-oa0s39ec43988eoa5r9qjk7k30fioa8u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1030416808811-oa0s39ec43988eoa5r9qjk7k30fioa8u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD96p4bNlImg95tEKIK2xSFX2G8ZaSSd_Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1030416808811</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Nomicos.OneEye</string>
+	<key>PROJECT_ID</key>
+	<string>oneye-cc0b5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>oneye-cc0b5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1030416808811:ios:8418ee20e066aa76cdea2e</string>
+	<key>DATABASE_URL</key>
+	<string>https://oneye-cc0b5.firebaseio.com</string>
+</dict>
+</plist>

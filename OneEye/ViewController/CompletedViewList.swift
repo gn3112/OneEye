@@ -72,7 +72,7 @@ extension CompletedViewList: UITableViewDataSource, UITableViewDelegate {
         switch segue.identifier {
             case "showViewFeed":
                 if let destination = segue.destination as? ViewFeedDetail {
-                       destination.image = views[(tableView.indexPathForSelectedRow?.row)!].image
+                       destination.url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                    }
                 tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
             case "eyeRequest": break

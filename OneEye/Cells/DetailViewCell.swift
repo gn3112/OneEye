@@ -10,11 +10,7 @@ import UIKit
 
 class DetailViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var imageDetail: UIImageView!
-    
-    func setImage(image: UIImage) {
-        imageDetail.image = image
-    }
-    
+    @IBOutlet weak var PlayerView: PlayerView!
+        
+
 }
