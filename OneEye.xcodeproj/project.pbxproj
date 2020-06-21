@@ -223,11 +223,11 @@
 		D8BA9D6A248F90370069FD0C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D802BE68249582D000EFAC18 /* UnansweredRequest.swift */,
 				D8BA9D66248F87A10069FD0C /* ViewFeedDetail.swift */,
 				D8BA9D5E248EF86E0069FD0C /* CompletedViewList.swift */,
 				D8BA9D80249117630069FD0C /* AddRequest.swift */,
 				D8BA9D8224912FFD0069FD0C /* LocationSearchTable.swift */,
+				D802BE68249582D000EFAC18 /* UnansweredRequest.swift */,
 				D8BA9D8A249396640069FD0C /* AnswerRequest.swift */,
 			);
 			name = ViewController;

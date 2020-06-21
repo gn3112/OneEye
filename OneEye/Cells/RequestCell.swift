@@ -13,7 +13,8 @@ class RequestCell: UITableViewCell {
     @IBOutlet weak var descriptionRequest: UILabel!
     @IBOutlet weak var nameRequest: UILabel!
     
-
+    @IBOutlet weak var answerButton: UIButton!
+    
     func setView(request: Request) {
         descriptionRequest.text = request.description
         nameRequest.text = request.name

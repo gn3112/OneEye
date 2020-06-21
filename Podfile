@@ -11,6 +11,7 @@ target 'OneEye' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'FirebaseFirestoreSwift'
   target 'OneEyeTests' do
     inherit! :search_paths
     # Pods for testing

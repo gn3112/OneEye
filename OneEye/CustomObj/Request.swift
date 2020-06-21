@@ -11,9 +11,13 @@ import Foundation
 class Request {
     var description: String
     var name: String
+    var id: String
+    var coordinate: [Double]
     
-    init(description: String, name: String) {
+    init(description: String, name: String, id: String, coordinate:[Double]) {
         self.description = description
         self.name = name
+        self.id = id
+        self.coordinate = coordinate
     }
 }

@@ -16,7 +16,7 @@ class ViewFeedDetail: UIViewController {
     var url: String?
     
     var views: [DetailEye] = []
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,12 +43,16 @@ extension ViewFeedDetail: UITableViewDataSource, UITableViewDelegate {
         
         let videoURL = NSURL(string: view.url)
         
-        let avPlayer = AVPlayer(url: videoURL as! URL)
-        
+        let avPlayer = AVPlayer(url: videoURL! as URL)
         cell.PlayerView?.playerLayer.player = avPlayer
-        
+                
         cell.PlayerView.player?.play()
-        
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let c = tableView.cellForRow(at: indexPath) as! DetailViewCell
+        c.PlayerView.player?.seek(to: CMTime.zero)
+        c.PlayerView.player?.play()
+        print("replay")
     }
 }

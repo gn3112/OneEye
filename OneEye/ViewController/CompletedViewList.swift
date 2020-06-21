@@ -7,41 +7,81 @@
 //
 
 import UIKit
+import Firebase
 
 class CompletedViewList: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
     var views: [View] = []
     
+    var db = Firestore.firestore()
+    
+    let storage = Storage.storage()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        views = createArray()
+        createArray()
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
-
+        
+        setUpRefresher()
     }
     
-    func createArray() -> [View] {
-        var tempViews: [View] = []
+    func setUpRefresher(){
+        tableView.refreshControl = UIRefreshControl()
         
-        var image1 = UIImage(named: "DSC_0215.jpg")
-        let image2 = UIImage(named: "DSC_0216.jpg")
-        
-        image1 = image1?.rotate(radians: -.pi/2)
-
-        let view1 = View(image: image1!, label: "Some place 1")
-        let view2 = View(image: image2!, label: "Some place 2")
-        
-        tempViews.append(view1)
-        tempViews.append(view2)
-        
-        return tempViews
+        tableView.refreshControl?.addTarget(self, action: #selector(refreshRequests), for: .valueChanged)
     }
+    
+    @objc private func refreshRequests(){
+        views.removeAll()
+        createArray()
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    func createArray() {
+//        var image1 = UIImage(named: "DSC_0215.jpg")
+
+//        image1 = image1?.rotate(radians: -.pi/2)
+//
+//        let view1 = View(image: image1!, label: "Some place 1")
+//        let view2 = View(image: image2!, label: "Some place 2")
+        self.db.collection("requests").whereField("answered", isEqualTo: true).getDocuments() {querySnapshot, err in
+        if let err = err {
+            print("Error getting docs: \(err)")
+        } else {
+            var i = 1
+            for doc in querySnapshot!.documents {
+                print("doc #")
+                let docData = doc.data()
+                let refImage = self.storage.reference(forURL: docData["urlImage"] as! String)
+                    refImage.getData(maxSize: 3*1024*1024) {data, error in
+                        if error == nil {
+                        let image = UIImage(data: data!)
+                        self.views.append(View(image: image!, label: docData["name"] as! String, url: docData["url"] as! String))
+                        print("Image success")
+
+                        if querySnapshot!.documents.count == i {
+                            print(self.views.count)
+                            self.tableView.reloadData()
+                        }
+                        i += 1
+                        } else {
+                            print("Fail downloading image with error: \(error)")
+                        }
+                    }
+                    
+            }
+        }
+        }
+    }
+    
 
     @IBAction func makeEyeRequest(_ sender: Any) {
         performSegue(withIdentifier: "eyeRequest", sender: nil)
@@ -72,7 +112,7 @@ extension CompletedViewList: UITableViewDataSource, UITableViewDelegate {
         switch segue.identifier {
             case "showViewFeed":
                 if let destination = segue.destination as? ViewFeedDetail {
-                       destination.url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                    destination.url = views[tableView.indexPathForSelectedRow!.row].url
                    }
                 tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
             case "eyeRequest": break

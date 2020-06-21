@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
@@ -33,9 +34,15 @@ class AddRequest: UIViewController {
     
     @IBOutlet weak var sendRequest: UIButton!
     
+    let db = Firestore.firestore()
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        descriptionRequest.delegate = self
+        
         locationManager.delegate = self
 
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -66,6 +73,46 @@ class AddRequest: UIViewController {
         sendRequest.layer.cornerRadius = 10
         sendRequest.clipsToBounds = true
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 11.0, *) {
+            navigationItem.hidesSearchBarWhenScrolling = false
+        }
+    }
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        if #available(iOS 11.0, *) {
+//            navigationItem.hidesSearchBarWhenScrolling = true
+//        }
+//    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else {
+          // if keyboard size is not available for some reason, dont do anything
+          return
+        }
+
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height , right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+      let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+          
+      
+      // reset back the content inset to zero after keyboard is gone
+      scrollView.contentInset = contentInsets
+      scrollView.scrollIndicatorInsets = contentInsets
     }
     
     @IBAction func handlePan(_ gesture: UIPanGestureRecognizer) {
@@ -91,6 +138,41 @@ class AddRequest: UIViewController {
                         
         })
         }
+    
+    func getDateAndTime() -> [String] {
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        dateFormatter.timeZone = TimeZone(identifier: "GMT")
+        
+        let d_t = dateFormatter.string(from: Date())
+        
+        return d_t.components(separatedBy: " ")
+    }
+    
+    @IBAction func sendRequest(_ sender: Any) {
+        let d_t = getDateAndTime()
+        
+        let requestsRef = db.collection("requests")
+        var ref: DocumentReference? = nil
+        ref = requestsRef.addDocument(data: [
+            "name": self.resultSearchController?.searchBar.text!,
+            "description": descriptionRequest.text!,
+            "coordinate": [annotation.coordinate.latitude, annotation.coordinate.longitude],
+            "time": d_t[1],
+            "date": d_t[0],
+            "user": "",
+            "answered": false,
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
 }
 
 extension AddRequest : CLLocationManagerDelegate {
@@ -173,6 +255,13 @@ extension AddRequest : MKMapViewDelegate {
 
 extension AddRequest: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
+
+extension AddRequest: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 }

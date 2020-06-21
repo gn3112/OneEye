@@ -17,10 +17,6 @@ class AnswerRequest: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         recordVideo()
-        
-    }
-    @IBAction func answerRequest(_ sender: Any) {
-        performSegue(withIdentifier: "showVideoCapture", sender: nil)
     }
     
     func recordVideo(){
@@ -50,15 +46,18 @@ extension AnswerRequest: UIImagePickerControllerDelegate, UINavigationController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print("Got the video")
         if let pickerVideo:NSURL = (info[UIImagePickerController.InfoKey.mediaURL] as? NSURL) {
-            let selectorCall = Selector("videoWasSavedSuccessfully:didFinishSavingwithError:context:")
-            UISaveVideoAtPathToSavedPhotosAlbum(pickerVideo.relativePath!, self, selectorCall, nil)
+//            let selectorCall = Selector("videoWasSavedSuccessfully:didFinishSavingwithError:context:")
+//            UISaveVideoAtPathToSavedPhotosAlbum(pickerVideo.relativePath!, self, selectorCall, nil)
+//
+//            let videoData = NSData(contentsOf: pickerVideo as URL)
+//            let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+//            let documentsDirectory = URL(fileURLWithPath: paths[0])
+//            let dataPath = documentsDirectory.appendingPathComponent("test.mp4")
+//
+//            videoData?.write(to: dataPath, atomically: false)
             
-            let videoData = NSData(contentsOf: pickerVideo as URL)
-            let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-            let documentsDirectory = URL(fileURLWithPath: paths[0])
-            let dataPath = documentsDirectory.appendingPathComponent("test.mp4")
+
             
-            videoData?.write(to: dataPath, atomically: false)
         }
         imagePicker.dismiss(animated: true, completion: {})
         
