@@ -1,9 +1,9 @@
 # OnEye
 
 ## TODO by order of priority
-- Capture video or from file
-- Monitor user post location and accept post based on that
-- Requests table view 
+- Capture video or from file :white_check_mark:
+- Monitor user post location and accept post based on that 
+- Requests table view :white_check_mark:
 - Firebase database for requests, posts
 - Firebase storage for videos/images
 - Link firebase to table views, uibuttons... 
