@@ -26,9 +26,10 @@ class CompletedViewList: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = .white
         
         setUpRefresher()
+        
+        self.navigationItem.title = "Answered requests"
     }
     
     func setUpRefresher(){
@@ -38,9 +39,8 @@ class CompletedViewList: UIViewController {
     }
     
     @objc private func refreshRequests(){
-        views.removeAll()
-        createArray()
         DispatchQueue.main.async {
+            self.createArray()
             self.tableView.refreshControl?.endRefreshing()
         }
     }
@@ -57,6 +57,7 @@ class CompletedViewList: UIViewController {
             print("Error getting docs: \(err)")
         } else {
             var i = 1
+            self.views.removeAll()
             for doc in querySnapshot!.documents {
                 print("doc #")
                 let docData = doc.data()
@@ -64,7 +65,7 @@ class CompletedViewList: UIViewController {
                     refImage.getData(maxSize: 3*1024*1024) {data, error in
                         if error == nil {
                         let image = UIImage(data: data!)
-                        self.views.append(View(image: image!, label: docData["name"] as! String, url: docData["url"] as! String))
+                            self.views.append(View(image: image!, label: docData["name"] as! String, url: docData["url"] as! String, time: self.getTimeLabel(requestTime: docData["time"] as! String, requestDate: docData["date"] as! String),nViews: 5, description: docData["description"] as! String))
                         print("Image success")
 
                         if querySnapshot!.documents.count == i {
@@ -82,7 +83,37 @@ class CompletedViewList: UIViewController {
         }
     }
     
+    func getTimeLabel(requestTime: String, requestDate: String) -> String{
+        let time_date = getDateAndTime()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        let date = dateFormatter.date(from: "\(requestDate) \(requestTime)")
+        print("\(requestDate) \(requestTime)")
+        let nowDate = dateFormatter.date(from: time_date)!
+        
+        var interval = Double(nowDate.timeIntervalSince(date!))
+        interval = interval / 60.0
+        if interval < 60 {
+            return "\(lround(interval))m"
+        }else if interval < 1440 {
+            
+            return "\(lround(interval/60.0))h"
+        }else{
+            return "\(lround((interval/60.0)/24.0))d"
+        }
+    }
+    
+    func getDateAndTime() -> String {
 
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+        dateFormatter.timeZone = TimeZone(identifier: "GMT")
+        
+        let d_t = dateFormatter.string(from: Date())
+        
+        return d_t
+    }
+    
     @IBAction func makeEyeRequest(_ sender: Any) {
         performSegue(withIdentifier: "eyeRequest", sender: nil)
     }
@@ -91,14 +122,17 @@ class CompletedViewList: UIViewController {
 
 extension CompletedViewList: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("c \(views.count)")
         return views.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("idx \(views.count)")
+
         let view = views[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ViewCell") as! ViewCell
-        
+
         cell.setView(view: view)
         
         return cell

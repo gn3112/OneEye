@@ -29,7 +29,7 @@ class UnansweredRequest: UIViewController {
     let db = Firestore.firestore()
     
     var requestId : String?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,7 +44,7 @@ class UnansweredRequest: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-
+        
     }
     
     func setUpRefresher(){
@@ -75,11 +75,11 @@ class UnansweredRequest: UIViewController {
     func verifyUserLocation(requestCoordinate:[Double]) -> Bool {
         if let coordinate = self.coordinateUser {
             let R:Double = 6371000
-            let lat1 = coordinate.latitude * .pi/180
-            let long1 = coordinate.longitude * .pi/180
+            let lat1 = coordinate.latitude * .pi/180.0
+            let long1 = coordinate.longitude * .pi/180.0
             
-            let lat2:Double = requestCoordinate[0] * .pi/180
-            let long2:Double = requestCoordinate[1] * .pi/180
+            let lat2:Double = requestCoordinate[0] * .pi/180.0
+            let long2:Double = requestCoordinate[1] * .pi/180.0
             
             let deltaLat = lat1 - lat2
             let deltaLong = long1 - long2
@@ -247,11 +247,10 @@ extension UnansweredRequest: UIImagePickerControllerDelegate, UINavigationContro
                 //store downloadURL
                 fileRef2.downloadURL {URL, error in
                     if let error = error {
-                        print("Error while get video URL: \(error)")
+                        print("Error while get image URL: \(error)")
                     } else {
                         let ref = self.db.collection("requests").document(self.requestId!)
                         ref.setData(["urlImage": URL!.absoluteString], merge: true)
-                        ref.updateData(["answered": true])
                     }
                 }
             }

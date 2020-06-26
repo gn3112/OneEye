@@ -57,6 +57,8 @@ class AddRequest: UIViewController {
         
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
+        let textSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textSearchBar?.textColor = .white
         searchBar.placeholder = "Search for places"
         navigationItem.searchController = resultSearchController
         

@@ -21,7 +21,6 @@ class ViewFeedDetail: UIViewController {
         super.viewDidLoad()
         
         views.append(DetailEye(url: url!))
-        views.append(DetailEye(url: url!))
 
         detailTableView.delegate = self
         detailTableView.dataSource = self
