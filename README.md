@@ -1,4 +1,4 @@
-# OnEye
+# OneEye
 
 ## TODO by order of priority
 - Capture video or from file :white_check_mark:
